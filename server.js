@@ -15,6 +15,6 @@ app.use(express.static("./public"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.listen(8000, () => {
+app.listen(process.env.port ||8000, () => {
   console.log("port is 8000");
 });
